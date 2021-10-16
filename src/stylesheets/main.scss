@@ -1,1 +1,245 @@
 // Your styles go here
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+.top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+nav {
+    background: lightgray;
+    grid-column: 1 / 3;
+}
+
+nav > ul {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 10px;
+    list-style: none;
+}
+nav > ul > li {
+    margin-left: 1rem;
+}
+nav > ul > li:first-child {
+    margin-left: 0;
+}   
+nav > ul > li:hover {
+    text-decoration: underline;
+    transform: scale(2, 2s);
+    transition: margin-right 2s;
+}
+nav > ul > li:nth-child(4) {
+    margin-left: auto;
+}  
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: rgb(0, 102, 255);
+}
+.jumbotron {
+    grid-column: 1 / 3;
+    text-align: center;
+    background-color: gray;
+    padding: 80px 50px;
+}
+.split {
+    grid-column: 1 / 2;
+    // display: flex;
+    // margin-top: 0;
+    // margin-bottom: 0;
+    // padding: 10px;
+    // flex-direction: column wrap;
+}
+.split2 {
+    grid-column: 2 / 3;
+}
+
+.jumbotron > .split > button {
+    background-color: rgb(0, 102, 255);
+    padding: .8rem 3rem;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+.jumbotron > .split > button:hover {
+    opacity: 1;
+}
+.jumbotron > .split2 > button {
+    background-color: rgb(0, 102, 255);
+    width: 200px;
+    height: 50px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: margin-right 4s;
+}
+.jumbotron > .split2 > button:hover {
+    width: 300px;
+}
+.info {
+    width: 80%;
+    margin: 0 auto 1rem;
+    text-align: center;
+}
+.onr {
+    text-align: center;
+}
+
+ .fcards {
+     display: flex;
+ }
+ .fcards > .fcard {
+     flex-flow: column;
+     align-items: stretch;
+     justify-content: space-between;
+     padding: 5px;
+}
+.fcards > .fcard > img {
+    height: 80%;
+}
+.container > button {
+    background-color: rgb(0, 102, 255);
+    padding: .5rem .8rem;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+.sc {
+    text-align: left;
+    background-color: rgb(204, 231, 248);
+    padding: 10px;
+}
+.mr {
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+.scards {
+    display: flex;
+}
+.scards > .scard { 
+    flex-flow: column;
+    align-items: stretch;
+    justify-content: space-between;  
+    padding: 5px;
+}
+.scards > .scard > img {
+    height: 60%;
+}
+.container2 > button {
+    padding: .5rem .8rem;
+    border: 2px solid rgb(0, 102, 255);
+    background-color: white;
+    border-radius: .5rem;
+    cursor: pointer;
+    
+}
+// .list {
+//     display: flex;
+//     flex-flow: row wrap;
+//     justify-content: space-between;
+// }
+// .list > .lists {
+//     width: 32%;
+// }
+// .list > .lists > .image {
+//     flex-basis: 10%;
+//     order: 1;
+//     align-content: flex-start;
+// }
+.list {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 4fr;
+    grid-template-areas: 
+     "to1 to1 to2 to2 to3 to3"
+     "i01 t01 i02 t02 i03 t03"
+     "i11 t11 i12 t12 i13 t13"
+     "i21 t21 i22 t22 i23 t23";
+     gap: 1rem;
+ }
+ .lists1 {grid-area: to1;}
+ .lists1 > img:nth-child(1) {grid-area: i01;}
+ .lists1 > img:nth-child(2) {grid-area: i11;}
+ .lists1 > img:nth-child(3) { grid-area: i21;}
+ .lists1 > .text:nth-child(1) {grid-area: t01;}
+ .lists1 > .text:nth-child(2) {grid-area: t11;}
+ .lists1 > .text:nth-child(3) {grid-area: t21;}
+ .lists2 {grid-area: to2;}
+ .lists2 > img:nth-child(1) {grid-area: i02;}
+ .lists2 > img:nth-child(2) {grid-area: i12;}
+ .lists2 > img:nth-child(3) { grid-area: i22;}
+ .lists2 > .text:nth-child(1) {grid-area: t02;}
+ .lists2 > .text:nth-child(2) {grid-area: t12;}
+ .lists2 > .text:nth-child(3) {grid-area: t22;}
+ .lists3 {grid-area: to3;}
+ .lists3 > img:nth-child(1) {grid-area: i03;}
+ .lists3 > img:nth-child(2) {grid-area: i13;}
+ .lists3 > img:nth-child(3) { grid-area: i23;}
+ .lists3 > .text:nth-child(1) {grid-area: t03;}
+ .lists3 > .text:nth-child(2) {grid-area: t13;}
+ .lists3 > .text:nth-child(3) {grid-area: t23;}
+
+// .list1 {grid-area: l01;}
+// .list2 {grid-area: l02;}
+// .list3 {grid-area: l03;}
+
+// .info {
+//      display: grid;
+//      grid-auto-flow: column;
+//      grid-template-areas:
+//      "h02 h02 h02 h02 h02 h02 h02 h02"
+//      "fc1 fc1 fc2 fc2 fc3 fc3 fc4 fc4"
+//      "h03 h03 h03 h03 h03 h03 h03 h03"
+//      "h04 h04 h04 h04 h04 h04 h04 h04"
+//      "sc1 sc2 sc2 sc3 sc4 sc5 sc5 sc6"
+//      "tp1 tp1 tp2 tp2 tp2 tp2 tp3 tp3";
+//      gap: 1rem;
+//  }
+//  .onr {grid-area: h02;}
+//  .fcard1 {grid-area: fc1;}
+//  .fcard2 {grid-area: fc2;}
+//  .fcard3 {grid-area: fc3;}
+//  .fcard4 {grid-area: fc4;}
+//  .sc {grid-area: h03;}
+//  .mr {grid-area: h04;}
+//  .scard1 {grid-area: sc1;}
+//  .scard2 {grid-area: sc2;}
+//  .scard3 {grid-area: sc3;}
+//  .scard4 {grid-area: sc4;}
+//  .scard5 {grid-area: sc5;}
+//  .scard6 {grid-area: sc6;}
+
+footer {
+    background-color: lightgray;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 4fr;
+    grid-template-areas: 
+    "h02 n01 n02";
+    gap: 8rem;
+    padding-left: 10rem;
+    padding-bottom: 10px;
+
+}
+.finfo2, .finfo3 {
+    padding-top: 20px;
+    color: rgb(0, 102, 255);
+}
+.finfo {grid-area: h02;}
+.finfo2 {grid-area: n01;}
+.finfo3 {grid-area: n02;}
